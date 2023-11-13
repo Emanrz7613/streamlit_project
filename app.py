@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-data = pd.readcsv("data.csv")
+data = pd.read_csv("data.csv")
 
-data.head(5)
+print(data.head(5))
