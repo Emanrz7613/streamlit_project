@@ -1,11 +1,10 @@
 import streamlit as st
 import pandas as pd
+import altair as alt 
 
-data = pd.read_csv("data.csv")
+df = pd.read_csv("data.csv")
 
-print(data.head(5))
+st.dataframe(df)
 
-data_clean = data.dropna(subset=['BOROUGH'])
-
-print(data_clean.head(5))
+st.line_chart(data=df, x="BOROUGH", y="NUMBER OF PERSONS KILLED")
 
